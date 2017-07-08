@@ -340,6 +340,17 @@ public class RestClient {
     }
 
     /**
+     * Get direct link to download a file from Disk
+     *
+     * @see <p>API reference <a href="https://tech.yandex.com/disk/api/reference/content-docpage/#url-request">english</a>,
+     * <a href="https://tech.yandex.ru/disk/api/reference/content-docpage/#url-request">russian</a></p>
+     */
+    public Link getDownloadLink(final String path)
+            throws IOException, ServerException {
+        return cloudApi.getDownloadLink(path);
+    }
+
+    /**
      * Uploading a file to Disk from external resource
      *
      * @see <p>API reference <a href="http://api.yandex.com/disk/api/reference/upload-ext.xml">english</a>,
